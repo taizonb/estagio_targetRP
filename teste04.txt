@@ -1,0 +1,8 @@
+4) Descubra a lógica e complete o próximo elemento:
+
+a) 1, 3, 5, 7, _9_ (soma-se 2 a cada incremento)
+b) 2, 4, 8, 16, 32, 64, _128_ (multiplica-se por 2 a cada incremento)
+c) 0, 1, 4, 9, 16, 25, 36, _49_ (a cada incremento, soma-se o próximo valor de uma PA de números ímpares)
+d) 4, 16, 36, 64, _100_ (4 vezes o número do incremento ao quadrado)
+e) 1, 1, 2, 3, 5, 8, _13_ (sequência de Fibonacci)
+f) 2, 10, 12, 16, 17, 18, 19, _20_ (Esta é uma curva logarítmica em que o limite tende a um valor fixo (próximo de 20) )

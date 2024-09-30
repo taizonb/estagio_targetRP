@@ -1,0 +1,43 @@
+5) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?
+
+Resposta:
+Esta pergunta exige conhecimentos de lógica condicional. Pelas condições do enunciado, não seria possível saber qual interruptor controla cada lâmpada, pois eu só posso ir duas vezes na mesma sala. Eu preciso de pelo menos 3 idas, porém em salas diferentes.
+Ou ainda, caso eu consiga saber a temperatura da lâmpada, é possível determinar em 2 idas (uma em cada sala diferente).
+
+Técnica com a temperatura da Lâmpada:
+Supondo I1, I2 e I3 como cada interruptor e S1, S2 e S3 como cada sala,
+Mantenho I1 ligado por 3 minutos, enquanto I2 e I3 desligados.
+Depois, desligo I1, ligo I2 e mantenho desligado I3:
+    - Primeira tentativa: I1 desligado, I2 ligado e I3 desligado.
+      Escolhendo a S1 para verificar, teriamos 3 opções:
+        * Opção 1: a lâmpada está acesa, assim I2 pertence a S1;
+        * Opção 2: a lâmpada está apagada, mas quente; assim I1 pertence a S1;
+        * Opção 3: a lâmpada está apagada e fria; assim I3 pertence a S1;
+    - Primeira tentativa: I1 desligado, I2 desligado e I3 ligado.
+      Escolhendo a S2 para verificar, teriam 2 opções:
+        * Opção 1: a lâmpada está acesa, assim I3 pertence a S2;
+        * Opção 2: a lâmpada está apagada, mas quente; assim I1 pertence a S2;
+        * Opção 3: a lâmpada está apagada e fria; assim I2 pertence a S3;
+    Por eliminação, o terceiro interruptor seria o que não foi descoberto.
+
+
+Técnica sem a temperatura da lâmpada:
+Assim, se eu pudesse ir 3 vezes (podendo utilizar salas diferentes):
+Supondo I1, I2 e I3 como cada interruptor e S1, S2 e S3 como cada sala,
+    - Primeira tentativa: I1 ligado, I2 ligado e I3 desligado.
+      Escolhendo a S1 para verificar, teriam 2 opções:
+        * Opção 1: a sala 1 estaria com a luz desligada. Então o I3 pertenceria a S1;
+            - Segunda tentativa: I1 ligado, I2 desligado e I3 desligado:
+                Escolhendo a S2 para verificar, teriam 2 opções:
+                    * Opção 1: a sala estaria com a luz desligada. Então I2 pertence a S2 e I3 percente a S3;
+                    * Opção 2: a sala estaria com a luz ligada. Então I1 percente a S2 e I2 pertence a S3;
+        * Opção 2: a sala estaria com a luz ligada. Então I1 ou I2 pertenceriam a S1 e E3 pertence a S2 ou S3.
+        - Segunda tentativa: I1 desligado, I2 ligado e I3 ligado
+          Esccolhendo S2 para verificar, teriam 2 opções:
+            * Opção 1: a sala 2 estaria com a luz desligada. Então o I1 pertenceria a S2 e consequentemente I2 pertence a S1 e I3 pertence a S3;
+            * Opção 2: a sala 2 estaria com a lux acesa. Então o I1 pertenceria a S1.
+            - Terceira tentativa: I1 desligado, I2 ligado e I3 desligado:
+                Esccolhendo S2 para verificar, teriam 2 opções:
+                * Opção 1: a sala 2 estaria com a luz desligada. Então I3 pertenceria a S2 e I2 pertence a S3;
+                * Opção 2: a sala 2 estaria com a luz ligada. Então I2 pertenceria a S2 e I3 pertence a S3;
+              
